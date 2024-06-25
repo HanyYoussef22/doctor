@@ -15,7 +15,7 @@ class AppTextFormField extends StatelessWidget {
   final Widget? suffixIcon;
   final Color? backgroundColor;
   final TextEditingController? controller;
-  final Function(String?) validator;
+//  final Function(String?) validator;
   const AppTextFormField({
     super.key,
     this.contentPadding,
@@ -28,7 +28,7 @@ class AppTextFormField extends StatelessWidget {
     this.suffixIcon,
     this.backgroundColor,
     this.controller,
-    required this.validator,
+  //  required this.validator,
   });
 
   @override
@@ -43,7 +43,7 @@ class AppTextFormField extends StatelessWidget {
             OutlineInputBorder(
               borderSide:  BorderSide(
                 color: ColorsManger.primaryColor,
-                width: 1.3,
+                width: 1.3.w,
               ),
               borderRadius: BorderRadius.circular(16.0),
             ),
@@ -51,21 +51,21 @@ class AppTextFormField extends StatelessWidget {
             OutlineInputBorder(
               borderSide:  BorderSide(
                 color: ColorsManger.lightgrey,
-                width: 0.18,
+                width: 0.18.w,
               ),
               borderRadius: BorderRadius.circular(16.0),
             ),
         errorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
+          borderSide:  BorderSide(
             color: Colors.red,
-            width: 1.3,
+            width: 1.3.w,
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
         focusedErrorBorder: OutlineInputBorder(
-          borderSide: const BorderSide(
+          borderSide:  BorderSide(
             color: Colors.red,
-            width: 1.3,
+            width: 1.3.w,
           ),
           borderRadius: BorderRadius.circular(16.0),
         ),
@@ -78,7 +78,7 @@ class AppTextFormField extends StatelessWidget {
       obscureText: isObscureText ?? false,
       style: Styles.font14DarkBulemedium,
       validator: (value) {
-        return validator(value);
+      //  return validator(value);
       },
     );
   }

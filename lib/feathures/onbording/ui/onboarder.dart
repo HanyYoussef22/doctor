@@ -1,4 +1,5 @@
 import 'package:doc_app/core/helpers/extensions.dart';
+import 'package:doc_app/core/helpers/spacing.dart';
 import 'package:doc_app/core/routing/roters.dart';
 import 'package:doc_app/core/theming/style/styles.dart';
 import 'package:doc_app/core/widgets/custom_button.dart';
@@ -20,11 +21,9 @@ class OnboarderScreen extends StatelessWidget {
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                DocLogoAndName(),
-                SizedBox(
-                  height: 30,
-                ),
-                DocImageAndBgText(),
+                const DocLogoAndName(),
+                verticalSpace(30.h),
+                const DocImageAndBgText(),
                 Padding(
                     padding: const EdgeInsets.only(left: 25, right: 25),
                     child: Column(
@@ -34,9 +33,7 @@ class OnboarderScreen extends StatelessWidget {
                           style: Styles.font12GryW700,
                           textAlign: TextAlign.center,
                         ),
-                        SizedBox(
-                          height: 32.h,
-                        ),
+                        verticalSpace(32.h),
                         CustomButton(
                             onTap: () {
                               context.pushNamed(Routers.loginScreen);
