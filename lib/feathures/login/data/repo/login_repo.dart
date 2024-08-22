@@ -1,8 +1,8 @@
 import 'package:doc_app/core/networking/api_error_handeler.dart';
 import 'package:doc_app/core/networking/api_result.dart';
 import 'package:doc_app/core/networking/api_service.dart';
-import 'package:doc_app/feathures/login/logic/data/login_request_body.dart';
-import 'package:doc_app/feathures/login/logic/data/login_response.dart';
+import 'package:doc_app/feathures/login/data/login_request_body.dart';
+import 'package:doc_app/feathures/login/data/login_response.dart';
 
 class LoginRepo {
   final ApiService _apiService;

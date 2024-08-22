@@ -2,7 +2,7 @@ import 'package:doc_app/core/helpers/app_regex.dart';
 import 'package:doc_app/core/theming/style/styles.dart';
 import 'package:doc_app/core/widgets/text_form_field.dart';
 import 'package:doc_app/feathures/login/logic/cubit/login_cubit.dart';
-import 'package:doc_app/feathures/login/logic/ui/widgets/password_validation.dart';
+import 'package:doc_app/feathures/login/ui/widgets/password_validation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -126,9 +126,9 @@ String? passValidate(String? text) {
     ,
   ).hasMatch(text);
 
-  /*if (!passValid) {
+  if (!passValid) {
     return 'Password must meet criteria';
-  }*/
+  }
 
   if (text.length < 8) {
     return 'Password must be at least 8 characters long';
