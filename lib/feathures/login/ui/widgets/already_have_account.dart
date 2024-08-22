@@ -1,4 +1,7 @@
+import 'package:doc_app/core/helpers/extensions.dart';
+import 'package:doc_app/core/routing/roters.dart';
 import 'package:doc_app/core/theming/style/styles.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 
 class AlredyHaveAccount extends StatelessWidget {
@@ -10,11 +13,18 @@ class AlredyHaveAccount extends StatelessWidget {
       textAlign: TextAlign.center,
       text: TextSpan(
         children: [
-          TextSpan(  text: 'Already have an account yet? ',
-        //By logging, you agree to our    PrivacyPolicy.
-        style: Styles.font13Gryregular,),
-          TextSpan(text: ' Sign Up ', style: Styles.font13Buleregular),
-        
+          TextSpan(
+            text: 'Don\'t have an account yet? ',
+            //By logging, you agree to our    PrivacyPolicy.
+            style: Styles.font13Gryregular,
+          ),
+          TextSpan(
+              text: ' Sign Up ',
+              style: Styles.font13Buleregular,
+              recognizer: TapGestureRecognizer()
+                ..onTap = () {
+                  context.pushReplacementNamed(Routers.signupScreen);
+                }),
         ],
       ),
     );
